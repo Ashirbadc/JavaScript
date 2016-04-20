@@ -3,6 +3,8 @@
 <head>
     </head>
 <body>
+  <div><p>This game is to guess a magic number between 1 and 100</p></div>
+  <div><p>Have a guess !</p></div>
     <form>
     <input type="number" id="input1"/>
     
@@ -10,9 +12,13 @@
     
    <div><button id="button1">Try it</button></div>
                                         
- <div id="demo"></div>
+ <div id="rn"></div>
  <div id="ug"></div>
 
+<div id="userfeedback"></div>
+
+ 
+    
     
 <script>
     //Event listener to fire the button
@@ -21,7 +27,7 @@
     
      //generate random number
      var randomnumber = Math.floor((Math.random() * 100) + 1);
-     document.getElementById("demo").innerHTML = "random number is: " + randomnumber;
+     document.getElementById("rn").innerHTML = "random number is: " + randomnumber;
 
     
     //function invoked with button clicked
@@ -29,14 +35,33 @@
         //alert("EL works");
         
         //collecting the user guess
-        var userinput1 = parseInt(document.getElementById ("input1").value);
+        var userguess = parseInt(document.getElementById ("input1").value);
 
         // testing user guess
-     document.getElementById("ug").innerHTML = "userguess number is: " + userinput1;
+        document.getElementById("ug").innerHTML = "userguess number is: " + userguess;
 
         
-       
+       //PROGRAM FLOW TO TEST USERGUESS AGAINST RANDOMNUMBER    
+       //compare the userguess to the randomnumber
+        if (userguess === randomnumber) {
+         //the numbers are the the same - guess is correct
+         document.getElementById("userfeedback").innerHTML = "Success! You guessed correctly";
+            
+        } else if(userguess < randomnumber){
+            // the userguess is too small
+             document.getElementById("userfeedback").innerHTML = "Your guess is smaller than the magic number";
+            
+        } else {
+           //userguess is larger than the random number
+             document.getElementById("userfeedback").innerHTML = "Your guess is higher than the magic number!";
         }
+        
+        
+        
+        
+        
+        
+        } //closing bracket of the function
     
     
 </script>
