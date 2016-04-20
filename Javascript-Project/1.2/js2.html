@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+     </head>
+       <body>
+    <form>
+    <input type="number" id="input1"/>
+    <input type="number" id="input2"/>
+    <input type="number" id="input3"/>
+</form>
+    <div><button id="button1">submit</button></div>
+    <div id="demo"></div>       
+         
+    </body>
+    
+
+ <script>
+     
+  var event1 = document.getElementById("button1");
+ 
+  event1.addEventListener('click', x, false);
+  function x() {
+        
+  var userinput1 = parseInt(document.getElementById ("input1").value);
+  var userinput2 = parseInt(document.getElementById ("input2").value);
+  var userinput3 = parseInt(document.getElementById ("input3").value);
+  document.getElementById("demo").innerHTML = userinput1 + userinput2 + userinput3;
+    }      
+    
+     
+    
+    </script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head> 
+</head> 
+<body>
+    
+
+    
+<p id="numloop"></p>
+    
+<button onclick="loopdaloop()">Click me!</button>   
+
+        
+
+
+
+
+  
+    
+<script>
+function loopdaloop() {
+    var text = "";
+    var i = 0;
+    while (i < 11) {
+        text += "<br>The number is " + i;
+        i++;
+    }
+    document.getElementById("numloop").innerHTML = text;
+}
+</script>
+</body>
+
+
+</html>

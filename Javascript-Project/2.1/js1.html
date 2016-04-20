@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    </head>
+<body>
+    <form>
+    <input type="number" id="input1"/>
+    
+    </form>
+    
+   <div><button id="button1">Try it</button></div>
+                                        
+ <div id="demo"></div>
+ <div id="ug"></div>
+
+    
+<script>
+    //Event listener to fire the button
+     var event1 = document.getElementById("button1");
+     event1.addEventListener('click', checkguess, false);
+    
+     //generate random number
+     var randomnumber = Math.floor((Math.random() * 100) + 1);
+     document.getElementById("demo").innerHTML = "random number is: " + randomnumber;
+
+    
+    //function invoked with button clicked
+    function checkguess(){
+        //alert("EL works");
+        
+        //collecting the user guess
+        var userinput1 = parseInt(document.getElementById ("input1").value);
+
+        // testing user guess
+     document.getElementById("ug").innerHTML = "userguess number is: " + userinput1;
+
+        
+       
+        }
+    
+    
+</script>
+
+</body>
+</html>
