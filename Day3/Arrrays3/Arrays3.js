@@ -10,7 +10,8 @@
       var fruits = new Array( document.getElementById("input1").value,  document.getElementById("input2").value, document.getElementById("input3").value);
           
       document.getElementById("demo").innerHTML = fruits[0] + " , " + fruits[1] + " , " + fruits[2];
-     
+      
+      //shift & unshift method
       //fruits.unshift("mangos", "grapes");
       //document.getElementById("demo").innerHTML = fruits; 
       fruits.shift("mangos", "grapes");
