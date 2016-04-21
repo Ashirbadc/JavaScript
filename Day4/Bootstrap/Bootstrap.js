@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    </head>
-<body>
-    <h1>Magic number game</h1>
-  <div><p>This game is to guess a magic number between 1 and 100</p></div>
-  <div><p>Have a guess !</p></div>
-    <form>
-    <input type="number" id="input1"/>
-    
-    </form>
-    
-   <div><button id="button1">Try it</button></div>
-                                        
- <div id="rn"></div>
- <div id="ug"></div>
-
-<div id="userfeedback"></div>
-
- 
-    
-    
-<script>
-    //Event listener to fire the button
+ //Event listener to fire the button
      var event1 = document.getElementById("button1");
      event1.addEventListener('click', checkguess, false);
     
@@ -33,8 +9,8 @@
      var countguesses = 0; 
     
     
-    //function invoked with button clicked
-    function checkguess(){
+     //function invoked with button clicked
+     function checkguess(){
         //alert("EL works");
         
         //collecting the user guess
@@ -71,8 +47,3 @@
         
         } //closing bracket of the function
     
-    
-</script>
-
-</body>
-</html>
