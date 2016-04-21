@@ -1,33 +1,41 @@
 // EVENT LISTENER
-var event1=document.getElementById("button1");
-event1.addEventListener('click', calculate_tax, false);
+var event1 = document.getElementById("button1");
+event1.addEventListener('click', CalculateSalary, false);
 
 //function invoked with button clicked
-function calculate_tax(){
-   
-    Tax free allownce = 0;
-    Tax at 20% = 0;
-    Tax at 40% = 0;
+function CalculateSalary(){
     
-   //collecting the amount  
-   var amount = parseInt(document.getElementById("calculate_tax").value); 
+    var taxtwenty = 0;
+    var taxfourty = 0;
     
-    if(amount <= 10600){
-     // run the code if amount is less than 10000
+
+    //collecting the amount  
+    var userinput1 = parseInt(document.getElementById("input1").value); 
+    document.getElementById("GrossSalary").innerHTML = "your gross salary is " + "£" + userinput1 ;
+
+    if(userinput1 <= 10600){
+     // run the code if amount is less than 10600
+    var userinput1 = parseInt(document.getElementById("input1").value);
+    document.getElementById("TaxFreeAllowance").innerHTML = "your tax free allownce is " + "£" + userinput1;
+
           }
-    else if(amount > 10000 && amount <= 31000){
-    // run the code if amount is in between 10000 and 31000
-    
-        
+    else if(userinput1 > 10600 && userinput1 <= 31000){
+        // run the code if amount is in between 10000 and 31000
+         taxtwenty = (userinput1-10000) * .20;
+    var userinput1 = parseInt(document.getElementById("input1").value);
+    document.getElementById("Taxat20%").innerHTML = "Your tax at 20% is " + "£" + userinput1;
+      
     }
     else{
-        
-    }
+       // run the code if amount is greater than 31000 
+        taxfourty = (userinput1 - taxtwenty) * .40;
     
-    document.getElementById("Tax free allowance").innerHTML = "your tax free allownce is " + amount ;
-    document.getElementById("Tax at 20%").innerHTML = "Your tax at 20% is " + amount ;
-    document.getElementById("Tax at 40%").innerHTML = "Your tax at 40% is " + amount ;
-    document.getElementById("Net salary").innerHTML = "The total Net salary is " + amount ;
+    var userinput1 = parseInt(document.getElementById("input1").value);
+    document.getElementById("Taxat40%").innerHTML = "Your tax at 40% is " + "£" + userinput1;
+    }
+    totalNet = (taxfourty + taxtwenty) - userinput1;
+    var userinput1 = parseInt(document.getElementById("input1").value);
+    document.getElementById("NetSalary").innerHTML = "The total Net salary is " + "£" + userinput1 ;
 }
   
 
