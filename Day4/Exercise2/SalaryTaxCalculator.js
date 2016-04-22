@@ -10,31 +10,27 @@ function CalculateSalary(){
     
 
     //collecting the amount  
-    var userinput1 = parseInt(document.getElementById("input1").value); 
+    var userinput1 = parseInt(document.getElementById("input1").value) 
     document.getElementById("GrossSalary").innerHTML = "your gross salary is " + "£" + userinput1 ;
 
     if(userinput1 <= 10600){
      // run the code if amount is less than 10600
-    var userinput1 = parseInt(document.getElementById("input1").value);
     document.getElementById("TaxFreeAllowance").innerHTML = "your tax free allownce is " + "£" + userinput1;
 
           }
     else if(userinput1 > 10600 && userinput1 <= 31000){
         // run the code if amount is in between 10000 and 31000
          taxtwenty = (userinput1-10000) * .20;
-    var userinput1 = parseInt(document.getElementById("input1").value);
     document.getElementById("Taxat20%").innerHTML = "Your tax at 20% is " + "£" + userinput1;
       
     }
     else{
        // run the code if amount is greater than 31000 
         taxfourty = (userinput1 - taxtwenty) * .40;
-    
-    var userinput1 = parseInt(document.getElementById("input1").value);
+        
     document.getElementById("Taxat40%").innerHTML = "Your tax at 40% is " + "£" + userinput1;
     }
     totalNet = (taxfourty + taxtwenty) - userinput1;
-    var userinput1 = parseInt(document.getElementById("input1").value);
     document.getElementById("NetSalary").innerHTML = "The total Net salary is " + "£" + userinput1 ;
 }
   
