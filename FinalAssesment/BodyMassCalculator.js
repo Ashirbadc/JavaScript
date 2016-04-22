@@ -1,4 +1,4 @@
-// Event Listener
+// Event Listener to fire button
 var event1=document.getElementById("button1");
 event1.addEventListener('click', CalculateBmi, false);
 //can be called repeatedly from anywhere from the program 
@@ -7,8 +7,9 @@ function CalculateBmi(){
 var TotalBMI = weight / height;    
         
 var TotalBMI = parseInt(document.getElementById("weight").value);
+// alert weight
 var TotalBMI = parseInt(document.getElementById("height").value);    
-
+// alert height
     
 if(TotalBMI < 18.5){
     //run this code if userinput BMI is less than 18.5
