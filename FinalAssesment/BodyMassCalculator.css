@@ -1,0 +1,16 @@
+@media (min-width: 700px){
+.container {
+    
+    width: 35%;
+}
+
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #401515;
+    background-color: #D0BEBE;
+}
+
