@@ -1,6 +1,5 @@
 // EVENT LISTENER
-var event1 = document.getElementById("button1");
-event1.addEventListener('click', CalculateSalary, false);
+document.getElementById("button1").addEventListener('click', CalculateSalary, false);
 
 //function invoked with button clicked
 function CalculateSalary(){
